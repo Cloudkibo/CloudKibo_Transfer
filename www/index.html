@@ -85,7 +85,7 @@ peer.on('open', function(id){
 peer.on('connection', connect);
 peer.on('error', function(err) {
   console.log(err);
-})
+});
 
 function connect(c) {
   if (c.label === 'chat') {
