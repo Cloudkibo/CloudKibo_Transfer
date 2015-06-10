@@ -2,6 +2,8 @@ package com.sadiq.megatransfer;
 
 /**
  * Created by sadiq7753 on 5/24/2015.
+ all rights reserved...
+
  */
 
 import java.net.URISyntaxException;
@@ -39,9 +41,9 @@ public class SocketService extends Service {
     }
 
 
-    public class SocketBinder extends Binder{
+    public class SocketBinder extends Binder {
 
-        public SocketService getService(){
+        public SocketService getService() {
             return SocketService.this;
         }
 
@@ -51,13 +53,12 @@ public class SocketService extends Service {
 
     }
 
-    public void setSocketIOConfig(){
+    public void setSocketIOConfig() {
 
 
         try {
 
             socket = IO.socket("http://45.55.233.191");
-
 
 
             socket.on(Socket.EVENT_CONNECT, new Emitter.Listener() {
@@ -137,10 +138,7 @@ public class SocketService extends Service {
     }
 
 
-
-
-
-    public void sendSocketMessageDataChannel(String msg, String filePeer){
+    public void sendSocketMessageDataChannel(String msg, String filePeer) {
 
         JSONObject message = new JSONObject();
 
@@ -158,8 +156,6 @@ public class SocketService extends Service {
             e.printStackTrace();
         }
     }
-
-
 
 
 }
